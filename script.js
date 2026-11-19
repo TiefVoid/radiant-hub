@@ -1,5 +1,4 @@
 const ether = document.getElementById("ether");
-const smoke = document.getElementById("smoke");
 const ship = document.getElementById("ship");
 const fog = document.getElementById("fog");
 
@@ -8,6 +7,5 @@ document.addEventListener("scroll", () => {
 
     ship.style.transform = `translateX(${value * 0.7}px)`;
     ether.style.transform = `translateY(${-value * 0.3}px)`;
-    smoke.style.transform = `translateY(${-value * 0.3}px)`;
     fog.style.transform = `translateX(${value * 0.2}px)`;
 })

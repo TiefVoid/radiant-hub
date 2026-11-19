@@ -19,8 +19,29 @@ body {
 header {
     width: 100%;
     height: 100vh;
+    height: 100svh;
     overflow: hidden;
     position: relative;
+
+    --ar: 1.78;          /* ether image aspect ratio */
+    --element-x: 0.15;   /* landmark at 15% of the image */
+    --ship-gap: 0.20;    /* how far right of the landmark the ship starts */
+    --crop-left: 0.16;   /* visible slice starts 10% into the image */
+
+    /* the stage is as wide as needed to cover the header */
+    --stage-w: max(100%, 100svh * var(--ar));
+}
+
+.stage {
+    position: absolute;
+    bottom: 0;
+    width: var(--stage-w);
+    aspect-ratio: var(--ar);
+    left: clamp(
+        100% - var(--stage-w),
+        var(--stage-w) * var(--crop-left) * -1,
+        0px
+    );
 }
 
 header img {
@@ -29,32 +50,26 @@ header img {
 
 #ether {
     z-index: 2;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
-#smoke {
-    z-index: 3;
-    opacity: 0.2;
-    width: 150%;
-    height: 150%;
-    bottom: 0;
-}
-
 #ship {
     z-index: 4;
-    width: 15%;
+    width: 12%;
+    left: calc((var(--element-x) + var(--ship-gap)) * 100%);
     bottom: 35%;
-    right: 45%;
     opacity: 0.3;
 }
 
 #fog {
     z-index: 5;
+    width: 45%;
+    left: calc((var(--element-x) + var(--ship-gap)) * 100% - 10%);
+    bottom: 20%;
     opacity: 0.3;
-    height: 70%;
-    bottom: 15%;
 }
 
 main {
@@ -105,6 +120,7 @@ main section .images {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 6rem;
 }
 
 main section .images > img {
@@ -148,7 +164,7 @@ main section .images .map-wrapper .pin {
 
 #exile{
     left: 26.7%;
-    top: 36.3%;
+    top: 35.5%;
 }
 
 #diamond{
