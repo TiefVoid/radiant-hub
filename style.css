@@ -9,6 +9,22 @@
     --light-text: #a6d0d8;
     --bg: url("images/bg.webp");
     --gradient: linear-gradient(to bottom, #314154, #59829f);
+    --siab: #ca1937;
+    --gods: #de8f4e;
+    --citlan: #e49cb5;
+    --zinda: #446463;
+    --yeonido: #9966cc;
+    --sensa: #ffbf00;
+    --tletepec: #16062c;
+    --shank: #a8c1d1;
+    --daya: #9b8e54;
+    --akharin: #40e0d0;
+    --janya: #a1cfdd;
+    --yong: #c5dbb2;
+    --atagua: #ffe87c;
+    --tayyib: #68263d;
+    --umizu: #fffaf4;
+    --khordad: #303698;
 }
 
 body {
@@ -145,6 +161,7 @@ main section .images .map-wrapper .marker {
     width: 5%;
     transform: translate(-50%, -100%);  /* tip of the pin sits on left/top */
     cursor: pointer;
+    text-decoration: none;
 }
 
 main section .images .map-wrapper .marker:hover {
@@ -220,4 +237,128 @@ main section .images .map-wrapper .marker:hover {
 #whispers{
     left: 57.6%;
     top: 73.6%;
+}
+
+.marker .boat-icon {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--c);
+    mask: url("images/boat.svg") center / contain no-repeat;
+    -webkit-mask: url("images/boat.svg") center / contain no-repeat;
+}
+
+.marker .boat-label {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: 6rem;
+    text-align: center;
+    line-height: 1.05;
+
+    font-size: clamp(0.65rem, 1.1vw, 1rem);
+    font-weight: 600;
+    color: black;
+
+    -webkit-text-stroke: 3px white;
+    paint-order: stroke fill;
+}
+
+#siab {
+    left: 82%;
+    top: 12%;
+    --c: var(--siab);
+}
+
+#gods {
+    left: 90%;
+    top: 22%;
+    --c: var(--gods);
+}
+
+#citlan {
+    left: 93%;
+    top: 31%;
+    --c: var(--citlan);
+}
+
+#zinda {
+    left: 95%;
+    top: 50%;
+    --c: var(--zinda);
+}
+
+#yeonido {
+    left: 93%;
+    top: 59%;
+    --c: var(--yeonido);
+}
+
+#sensa {
+    left: 94%;
+    top: 72%;
+    --c: var(--sensa);
+}
+
+#tletepec {
+    left: 90%;
+    top: 84%;
+    --c: var(--tletepec);
+}
+
+#shank {
+    left: 79%;
+    top: 94%;
+    --c: var(--shank);
+}
+
+#daya {
+    left: 60%;
+    top: 97%;
+    --c: var(--daya);
+}
+
+#akharin {
+    left: 41%;
+    top: 94%;
+    --c: var(--akharin);
+}
+
+#janya {
+    left: 7.5%;
+    top: 86%;
+    --c: var(--janya);
+}
+
+#yong {
+    left: 7%;
+    top: 50%;
+    --c: var(--yong);
+}
+
+#atagua {
+    left: 9%;
+    top: 35%;
+    --c: var(--atagua);
+}
+
+#tayyib {
+    left: 15%;
+    top: 26%;
+    --c: var(--tayyib);
+}
+
+#umizu {
+    left: 25%;
+    top: 18%;
+    --c: var(--umizu);
+}
+
+#khordad {
+    left: 34%;
+    top: 14.5%;
+    --c: var(--khordad);
 }
