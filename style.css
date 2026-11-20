@@ -102,6 +102,7 @@ main section h2 {
     color: var(--light-text);
     font-size: clamp(2rem, 8vw, 6rem);
     text-align: center;
+    margin-top: 2rem;
 }
 
 main section h1 {
@@ -117,19 +118,19 @@ main section h1 {
 }
 
 main section .text-container {
-    display: flex;
     color: white;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    gap: 20%;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    font-weight: 500;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    line-height: 1.6;
 }
 
-main section .text-container div {
-    display: flex;
-    flex-direction: column;
-    gap: 20%;
+main section .text-container p + p {
+    margin-top: 1.5rem;
+}
+
+main section .text-container b {
+    color: var(--light-text);
 }
 
 main section .images {
@@ -159,7 +160,7 @@ main section .images .map-wrapper .map {
 main section .images .map-wrapper .marker {
     position: absolute;
     width: 5%;
-    transform: translate(-50%, -100%);  /* tip of the pin sits on left/top */
+    transform: translate(-50%, -100%);
     cursor: pointer;
     text-decoration: none;
 }
